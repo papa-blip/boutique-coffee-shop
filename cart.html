@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bean Boutique | Shopping Cart</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <p class="brand"><strong>BEAN BOUTIQUE</strong> — Shopping Cart</p>
+  <form class="page-search" role="search" onsubmit="return false;">
+    <label for="page-search-input" class="visually-hidden">Search this page</label>
+    <input id="page-search-input" type="search" placeholder="Find on this page" autocomplete="off">
+    <span class="search-count" id="page-search-count" aria-live="polite"></span>
+  </form>
+  <nav class="primary-nav" aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+    <a href="coffee.html">Coffee Selection</a>
+    <a href="equipment.html">Brewing Equipment</a>
+    <a href="events.html">Events &amp; Workshops</a>
+    <a href="offers.html">Offers &amp; Subscriptions</a>
+    <a href="cart.html" class="current">Shopping Cart</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Your shopping cart</h1>
+  <p id="added-message">Review your selected items and complete your order.</p>
+
+  <form action="thanks.html" method="get" class="wide">
+    <table>
+      <caption>Selected items</caption>
+      <thead>
+        <tr><th scope="col">Item</th><th scope="col">Quantity</th><th scope="col">Price</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <label for="cart-item">Product</label>
+            <select id="cart-item" name="item">
+              <option>Sunrise Espresso</option>
+              <option>Cloud Forest</option>
+              <option>Midnight Decaf</option>
+              <option>Classic French Press</option>
+              <option>Hand Grinder</option>
+              <option>Gooseneck Kettle</option>
+            </select>
+          </td>
+          <td><label for="cart-qty" class="visually-hidden">Quantity</label><input id="cart-qty" name="quantity" type="number" min="1" max="10" value="1"></td>
+          <td>From 12,500 MWK</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <label for="customer-name">Name</label>
+    <input id="customer-name" name="name" required>
+
+    <label for="customer-email">Email</label>
+    <input id="customer-email" name="email" type="email" required>
+
+    <label for="notes">Delivery notes</label>
+    <textarea id="notes" name="notes" rows="4"></textarea>
+
+    <button type="submit">Continue to checkout</button>
+  </form>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h2>Bean Boutique</h2>
+      <p>An independent neighbourhood coffee shop — small-batch roasting, honest brewing advice, and a table that's always open.</p>
+    </div>
+
+    <div>
+      <h2>Explore</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="coffee.html">Coffee Selection</a></li>
+        <li><a href="equipment.html">Brewing Equipment</a></li>
+        <li><a href="events.html">Events &amp; Workshops</a></li>
+        <li><a href="offers.html">Offers &amp; Subscriptions</a></li>
+        <li><a href="cart.html">Shopping Cart</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>Visit us</h2>
+      <p>NACIT Lilongwe campus, off Paul Kagame Road, right behind Government Print.</p>
+      <p>Mon&ndash;Fri: 7:00&ndash;18:00<br>Sat&ndash;Sun: 8:00&ndash;16:00</p>
+      <p><a href="https://www.openstreetmap.org/search?query=National%20College%20of%20Information%20Technology%20NACIT%20Paul%20Kagame%20Road%20Lilongwe" target="_blank" rel="noopener">Open interactive map</a></p>
+    </div>
+
+    <div>
+      <h2>Get in touch</h2>
+      <p>Email: <a href="mailto:beanboutique@gmail.com">beanboutique@gmail.com</a></p>
+      <p>Phone: <a href="tel:+265882634630">+265 882634630</a></p>
+      <div class="footer-social">
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+  </div>
+
+
+</footer>
+
+<script>
+  // Reflect which product was just added via the query string (?item=...)
+  var params = new URLSearchParams(window.location.search);
+  var addedItem = params.get('item');
+  var select = document.getElementById('cart-item');
+  var message = document.getElementById('added-message');
+
+  if (addedItem) {
+    var optionExists = Array.from(select.options).some(function (opt) {
+      return opt.value === addedItem;
+    });
+    if (optionExists) {
+      select.value = addedItem;
+      message.textContent = addedItem + ' was added to your cart. Review your order and complete checkout below.';
+    }
+  }
+</script>
+<script src="site.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bean Boutique | Offers &amp; Subscriptions</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <p class="brand"><strong>BEAN BOUTIQUE</strong> — Offers &amp; Subscriptions</p>
+  <form class="page-search" role="search" onsubmit="return false;">
+    <label for="page-search-input" class="visually-hidden">Search this page</label>
+    <input id="page-search-input" type="search" placeholder="Find on this page" autocomplete="off">
+    <span class="search-count" id="page-search-count" aria-live="polite"></span>
+  </form>
+  <nav class="primary-nav" aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+    <a href="coffee.html">Coffee Selection</a>
+    <a href="equipment.html">Brewing Equipment</a>
+    <a href="events.html">Events &amp; Workshops</a>
+    <a href="offers.html" class="current">Offers &amp; Subscriptions</a>
+    <a href="cart.html">Shopping Cart</a>
+  </nav>
+</header>
+
+<main>
+  <h1>More coffee, fewer decisions</h1>
+  <img class="feature-img" src="images/offers-bags.jpg" alt="Bags of coffee ready for a subscription delivery" width="1200" height="700">
+  <p>Save on regular deliveries and discover a new roast at your own pace.</p>
+
+  <section>
+    <h2>Subscription plans</h2>
+    <div class="card-grid">
+      <article class="card">
+        <h3>Daily Ritual <span class="price">15,000 MWK/month</span></h3>
+        <p>One 250g bag every month, chosen from our best-selling blends.</p>
+        <form action="thanks.html" method="get">
+          <input type="hidden" name="plan" value="Daily Ritual">
+          <button type="submit">Choose Daily Ritual</button>
+        </form>
+      </article>
+      <article class="card">
+        <h3>Origin Explorer <span class="price">25,000 MWK/month</span></h3>
+        <p>Two 250g single-origin bags plus tasting notes and brew recipes.</p>
+        <form action="thanks.html" method="get">
+          <input type="hidden" name="plan" value="Origin Explorer">
+          <button type="submit">Choose Origin Explorer</button>
+        </form>
+      </article>
+      <article class="card">
+        <h3>Office Table <span class="price">42,000 MWK/month</span></h3>
+        <p>Four 250g bags for shared kitchens, with flexible grind options.</p>
+        <form action="thanks.html" method="get">
+          <input type="hidden" name="plan" value="Office Table">
+          <button type="submit">Choose Office Table</button>
+        </form>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Current offers</h2>
+    <ul>
+      <li>10% off your first order when you join the Bean Letter.</li>
+      <li>Free delivery on subscriptions.</li>
+      <li>Bring a reusable cup on Mondays for a small drink upgrade.</li>
+    </ul>
+    <form action="thanks.html" method="get">
+      <label for="offers-email">Get monthly offers by email</label>
+      <input id="offers-email" name="email" type="email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h2>Bean Boutique</h2>
+      <p>An independent neighbourhood coffee shop — small-batch roasting, honest brewing advice, and a table that's always open.</p>
+    </div>
+
+    <div>
+      <h2>Explore</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="coffee.html">Coffee Selection</a></li>
+        <li><a href="equipment.html">Brewing Equipment</a></li>
+        <li><a href="events.html">Events &amp; Workshops</a></li>
+        <li><a href="offers.html">Offers &amp; Subscriptions</a></li>
+        <li><a href="cart.html">Shopping Cart</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>Visit us</h2>
+      <p>NACIT Lilongwe campus, off Paul Kagame Road, right behind Government Print.</p>
+      <p>Mon&ndash;Fri: 7:00&ndash;18:00<br>Sat&ndash;Sun: 8:00&ndash;16:00</p>
+      <p><a href="https://www.openstreetmap.org/search?query=National%20College%20of%20Information%20Technology%20NACIT%20Paul%20Kagame%20Road%20Lilongwe" target="_blank" rel="noopener">Open interactive map</a></p>
+    </div>
+
+    <div>
+      <h2>Get in touch</h2>
+      <p>Email: <a href="mailto:beanboutique@gmail.com">beanboutique@gmail.com</a></p>
+      <p>Phone: <a href="tel:+265882634630">+265 882634630</a></p>
+      <div class="footer-social">
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+  </div>
+
+
+</footer>
+<script src="site.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bean Boutique | Brewing Equipment</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <p class="brand"><strong>BEAN BOUTIQUE</strong> — Brewing Equipment</p>
+  <form class="page-search" role="search" onsubmit="return false;">
+    <label for="page-search-input" class="visually-hidden">Search this page</label>
+    <input id="page-search-input" type="search" placeholder="Find on this page" autocomplete="off">
+    <span class="search-count" id="page-search-count" aria-live="polite"></span>
+  </form>
+  <nav class="primary-nav" aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+    <a href="coffee.html">Coffee Selection</a>
+    <a href="equipment.html" class="current">Brewing Equipment</a>
+    <a href="events.html">Events &amp; Workshops</a>
+    <a href="offers.html">Offers &amp; Subscriptions</a>
+    <a href="cart.html">Shopping Cart</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Brewing Equipment</h1>
+  <p>Reliable tools, practical guidance, and no intimidating jargon.</p>
+
+  <div class="card-grid">
+    <article class="card" id="french-press">
+      <img src="images/equip-frenchpress.jpg" alt="French press coffee setup on a wooden table" width="700" height="450">
+      <h2>Classic French Press <span class="price">28,000 MWK</span></h2>
+      <p>A durable cafeti&egrave;re for a full-bodied, generous brew.</p>
+      <details>
+        <summary>Usage tips</summary>
+        <ol>
+          <li>Use coarse-ground coffee.</li>
+          <li>Add hot water just off the boil.</li>
+          <li>Steep for four minutes, then plunge slowly.</li>
+        </ol>
+      </details>
+      <form action="cart.html" method="get">
+        <input type="hidden" name="item" value="Classic French Press">
+        <button type="submit">Add to cart</button>
+      </form>
+    </article>
+
+    <article class="card">
+      <img src="images/equip-grinder.jpg" alt="Manual coffee grinder on a counter" width="700" height="450">
+      <h2>Hand Grinder <span class="price">50,000 MWK</span></h2>
+      <p>Adjustable ceramic burr grinder for consistent grounds at home or away.</p>
+      <details>
+        <summary>Usage tips</summary>
+        <p>Start at a medium setting, then adjust finer for espresso or coarser for French press.</p>
+      </details>
+      <form action="cart.html" method="get">
+        <input type="hidden" name="item" value="Hand Grinder">
+        <button type="submit">Add to cart</button>
+      </form>
+    </article>
+
+    <article class="card">
+      <img src="images/equip-kettle.jpg" alt="Gooseneck kettle with coffee brewing accessories" width="700" height="450">
+      <h2>Gooseneck Kettle <span class="price">72,000 MWK</span></h2>
+      <p>Temperature display and precise pouring for controlled pour-over recipes.</p>
+      <details>
+        <summary>Usage tips</summary>
+        <p>Use 92&ndash;96&deg;C water and pour in slow spirals for even extraction.</p>
+      </details>
+      <form action="cart.html" method="get">
+        <input type="hidden" name="item" value="Gooseneck Kettle">
+        <button type="submit">Add to cart</button>
+      </form>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h2>Bean Boutique</h2>
+      <p>An independent neighbourhood coffee shop — small-batch roasting, honest brewing advice, and a table that's always open.</p>
+    </div>
+
+    <div>
+      <h2>Explore</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="coffee.html">Coffee Selection</a></li>
+        <li><a href="equipment.html">Brewing Equipment</a></li>
+        <li><a href="events.html">Events &amp; Workshops</a></li>
+        <li><a href="offers.html">Offers &amp; Subscriptions</a></li>
+        <li><a href="cart.html">Shopping Cart</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>Visit us</h2>
+      <p>NACIT Lilongwe campus, off Paul Kagame Road, right behind Government Print.</p>
+      <p>Mon&ndash;Fri: 7:00&ndash;18:00<br>Sat&ndash;Sun: 8:00&ndash;16:00</p>
+      <p><a href="https://www.openstreetmap.org/search?query=National%20College%20of%20Information%20Technology%20NACIT%20Paul%20Kagame%20Road%20Lilongwe" target="_blank" rel="noopener">Open interactive map</a></p>
+    </div>
+
+    <div>
+      <h2>Get in touch</h2>
+      <p>Email: <a href="mailto:beanboutique@gmail.com">beanboutique@gmail.com</a></p>
+      <p>Phone: <a href="tel:+265882634630">+265 882634630</a></p>
+      <div class="footer-social">
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+  </div>
+
+
+</footer>
+<script src="site.js"></script>
+</body>
+</html>

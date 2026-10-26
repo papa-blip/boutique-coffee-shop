@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bean Boutique | Events &amp; Workshops</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <p class="brand"><strong>BEAN BOUTIQUE</strong> — Events &amp; Workshops</p>
+  <form class="page-search" role="search" onsubmit="return false;">
+    <label for="page-search-input" class="visually-hidden">Search this page</label>
+    <input id="page-search-input" type="search" placeholder="Find on this page" autocomplete="off">
+    <span class="search-count" id="page-search-count" aria-live="polite"></span>
+  </form>
+  <nav class="primary-nav" aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+    <a href="coffee.html">Coffee Selection</a>
+    <a href="equipment.html">Brewing Equipment</a>
+    <a href="events.html" class="current">Events &amp; Workshops</a>
+    <a href="offers.html">Offers &amp; Subscriptions</a>
+    <a href="cart.html">Shopping Cart</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Gather, taste, learn</h1>
+  <img class="feature-img" src="images/events-tasting.jpg" alt="Small group gathered around a table for a coffee tasting workshop" width="1200" height="700">
+  <p>Our small-group sessions are friendly, practical, and suitable for curious beginners.</p>
+
+  <section aria-labelledby="calendar">
+    <h2 id="calendar">Upcoming events</h2>
+    <table>
+      <caption>September events</caption>
+      <thead>
+        <tr><th scope="col">Date</th><th scope="col">Time (SAST)</th><th scope="col">Event</th><th scope="col">Places</th></tr>
+      </thead>
+      <tbody>
+        <tr id="pour-over"><td>20 September</td><td>10:00</td><td>Pour-over Saturday</td><td>6 remaining</td></tr>
+        <tr><td>24 September</td><td>18:30</td><td>Origin Tasting: East Africa</td><td>10 remaining</td></tr>
+        <tr><td>28 September</td><td>11:00</td><td>Meet the Roaster</td><td>4 remaining</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="split">
+  <section>
+    <h2>Register online</h2>
+    <form action="thanks.html" method="get">
+      <label for="event">Choose an event</label>
+      <select id="event" name="event" required>
+        <option value="">Select one</option>
+        <option>Pour-over Saturday</option>
+        <option>Origin Tasting: East Africa</option>
+        <option>Meet the Roaster</option>
+      </select>
+
+      <div class="name-fields">
+        <div>
+          <label for="first-name">First name</label>
+          <input id="first-name" name="first_name" required>
+        </div>
+        <div>
+          <label for="last-name">Last name</label>
+          <input id="last-name" name="last_name" required>
+        </div>
+      </div>
+
+      <label for="event-email">Email</label>
+      <input id="event-email" name="email" type="email" required>
+
+      <label for="guests">Number of places</label>
+      <input id="guests" name="guests" type="number" min="1" max="4" value="1">
+
+      <button type="submit">Request a place</button>
+    </form>
+  </section>
+
+  <aside>
+    <h2>Where we meet</h2>
+    <p>National College of Information Technology (NACIT), Lilongwe campus, off Paul Kagame Road, right behind Government Print.</p>
+    <iframe class="map-embed" title="Map showing NACIT Lilongwe campus" src="https://www.openstreetmap.org/export/embed.html?bbox=33.76%2C-13.99%2C33.81%2C-13.95&amp;layer=mapnik&amp;marker=33.785%2C-13.972" width="600" height="350"></iframe>
+  </aside>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h2>Bean Boutique</h2>
+      <p>An independent neighbourhood coffee shop — small-batch roasting, honest brewing advice, and a table that's always open.</p>
+    </div>
+
+    <div>
+      <h2>Explore</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="coffee.html">Coffee Selection</a></li>
+        <li><a href="equipment.html">Brewing Equipment</a></li>
+        <li><a href="events.html">Events &amp; Workshops</a></li>
+        <li><a href="offers.html">Offers &amp; Subscriptions</a></li>
+        <li><a href="cart.html">Shopping Cart</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>Visit us</h2>
+      <p>NACIT Lilongwe campus, off Paul Kagame Road, right behind Government Print.</p>
+      <p>Mon&ndash;Fri: 7:00&ndash;18:00<br>Sat&ndash;Sun: 8:00&ndash;16:00</p>
+      <p><a href="https://www.openstreetmap.org/search?query=National%20College%20of%20Information%20Technology%20NACIT%20Paul%20Kagame%20Road%20Lilongwe" target="_blank" rel="noopener">Open interactive map</a></p>
+    </div>
+
+    <div>
+      <h2>Get in touch</h2>
+      <p>Email: <a href="mailto:beanboutique@gmail.com">beanboutique@gmail.com</a></p>
+      <p>Phone: <a href="tel:+265882634630">+265 882634630</a></p>
+      <div class="footer-social">
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+  </div>
+
+
+</footer>
+<script src="site.js"></script>
+</body>
+</html>

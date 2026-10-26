@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bean Boutique | Coffee Selection</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <p class="brand"><strong>BEAN BOUTIQUE</strong> — Coffee Selection</p>
+  <form class="page-search" role="search" onsubmit="return false;">
+    <label for="page-search-input" class="visually-hidden">Search this page</label>
+    <input id="page-search-input" type="search" placeholder="Find on this page" autocomplete="off">
+    <span class="search-count" id="page-search-count" aria-live="polite"></span>
+  </form>
+  <nav class="primary-nav" aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+    <a href="coffee.html" class="current">Coffee Selection</a>
+    <a href="equipment.html">Brewing Equipment</a>
+    <a href="events.html">Events &amp; Workshops</a>
+    <a href="offers.html">Offers &amp; Subscriptions</a>
+    <a href="cart.html">Shopping Cart</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Coffee Selection</h1>
+  <p>Choose by flavour, origin, or brewing method. All coffees are available as whole bean or ground to order.</p>
+
+  <!-- Plugin 1: live animated search/filter (Task 1 & 2 requirement) -->
+  <form class="search-widget" onsubmit="return false;">
+    <label for="search">Search the catalogue</label>
+    <input id="search" name="search" type="search" placeholder="Try chocolate or Ethiopia" autocomplete="off">
+  </form>
+  <p class="no-results" id="no-results">No coffees match your search — try a different word.</p>
+
+  <section>
+    <h2>Our current coffees</h2>
+    <div class="card-grid" id="coffee-grid">
+
+      <article class="card" id="sunrise" data-search="sunrise espresso brazil colombia chocolate almond orange medium">
+        <img src="images/coffee-sunrise.jpg" alt="Roasted coffee beans" width="600" height="400">
+        <h3>Sunrise Espresso <span class="price">2,000 MWK</span></h3>
+        <p>Brazil and Colombia blend with cocoa, toasted almond, and orange zest.</p>
+        <p><strong>Best method:</strong> Espresso or moka pot. <strong>Roast:</strong> Medium.</p>
+
+        <!-- Plugin 2: interactive star rating widget -->
+        <div class="rating" role="group" aria-label="Rate Sunrise Espresso" data-rating="4">
+          <button type="button" data-star="1" aria-label="1 star">&#9733;</button>
+          <button type="button" data-star="2" aria-label="2 stars">&#9733;</button>
+          <button type="button" data-star="3" aria-label="3 stars">&#9733;</button>
+          <button type="button" data-star="4" aria-label="4 stars">&#9733;</button>
+          <button type="button" data-star="5" aria-label="5 stars">&#9733;</button>
+        </div>
+        <p class="rating-note">Tap to rate this blend</p>
+
+        <form action="cart.html" method="get">
+          <input type="hidden" name="item" value="Sunrise Espresso">
+          <button type="submit">Add to cart</button>
+        </form>
+      </article>
+
+      <article class="card" data-search="cloud forest guatemala single origin apple caramel floral light">
+        <img src="images/coffee-cloudforest.jpg" alt="Freshly brewed coffee with beans and grounds" width="600" height="400">
+        <h3>Cloud Forest <span class="price">16,000 MWK</span></h3>
+        <p>Guatemala single origin with red apple, caramel, and a floral finish.</p>
+        <p><strong>Best method:</strong> V60 or batch brew. <strong>Roast:</strong> Light-medium.</p>
+
+        <div class="rating" role="group" aria-label="Rate Cloud Forest" data-rating="5">
+          <button type="button" data-star="1" aria-label="1 star">&#9733;</button>
+          <button type="button" data-star="2" aria-label="2 stars">&#9733;</button>
+          <button type="button" data-star="3" aria-label="3 stars">&#9733;</button>
+          <button type="button" data-star="4" aria-label="4 stars">&#9733;</button>
+          <button type="button" data-star="5" aria-label="5 stars">&#9733;</button>
+        </div>
+        <p class="rating-note">Tap to rate this blend</p>
+
+        <form action="cart.html" method="get">
+          <input type="hidden" name="item" value="Cloud Forest">
+          <button type="submit">Add to cart</button>
+        </form>
+      </article>
+
+      <article class="card" data-search="midnight decaf swiss water dark chocolate raisin walnut">
+        <img src="images/coffee-midnight.jpg" alt="Dark roasted coffee beans in a bag" width="600" height="400">
+        <h3>Midnight Decaf <span class="price">13,500 MWK</span></h3>
+        <p>Swiss Water decaf with dark chocolate, raisin, and walnut.</p>
+        <p><strong>Best method:</strong> French press or espresso. <strong>Roast:</strong> Medium-dark.</p>
+
+        <div class="rating" role="group" aria-label="Rate Midnight Decaf" data-rating="4">
+          <button type="button" data-star="1" aria-label="1 star">&#9733;</button>
+          <button type="button" data-star="2" aria-label="2 stars">&#9733;</button>
+          <button type="button" data-star="3" aria-label="3 stars">&#9733;</button>
+          <button type="button" data-star="4" aria-label="4 stars">&#9733;</button>
+          <button type="button" data-star="5" aria-label="5 stars">&#9733;</button>
+        </div>
+        <p class="rating-note">Tap to rate this blend</p>
+
+        <form action="cart.html" method="get">
+          <input type="hidden" name="item" value="Midnight Decaf">
+          <button type="submit">Add to cart</button>
+        </form>
+      </article>
+
+    </div>
+  </section>
+
+  <aside>
+    <h2>Need a recommendation?</h2>
+    <p>Tell us what you like and we'll suggest a bag.</p>
+    <form action="thanks.html" method="get">
+      <label for="ask-email">Your email</label>
+      <input id="ask-email" name="email" type="email" required>
+      <button type="submit">Ask the team</button>
+    </form>
+  </aside>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h2>Bean Boutique</h2>
+      <p>An independent neighbourhood coffee shop — small-batch roasting, honest brewing advice, and a table that's always open.</p>
+    </div>
+
+    <div>
+      <h2>Explore</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="coffee.html">Coffee Selection</a></li>
+        <li><a href="equipment.html">Brewing Equipment</a></li>
+        <li><a href="events.html">Events &amp; Workshops</a></li>
+        <li><a href="offers.html">Offers &amp; Subscriptions</a></li>
+        <li><a href="cart.html">Shopping Cart</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>Visit us</h2>
+      <p>NACIT Lilongwe campus, off Paul Kagame Road, right behind Government Print.</p>
+      <p>Mon&ndash;Fri: 7:00&ndash;18:00<br>Sat&ndash;Sun: 8:00&ndash;16:00</p>
+      <p><a href="https://www.openstreetmap.org/search?query=National%20College%20of%20Information%20Technology%20NACIT%20Paul%20Kagame%20Road%20Lilongwe" target="_blank" rel="noopener">Open interactive map</a></p>
+    </div>
+
+    <div>
+      <h2>Get in touch</h2>
+      <p>Email: <a href="mailto:beanboutique@gmail.com">beanboutique@gmail.com</a></p>
+      <p>Phone: <a href="tel:+265882634630">+265 882634630</a></p>
+      <div class="footer-social">
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+  </div>
+
+
+</footer>
+
+<script>
+  // Plugin 1: animated live search/filter across the coffee cards
+  var searchInput = document.getElementById('search');
+  var cards = document.querySelectorAll('#coffee-grid .card');
+  var noResults = document.getElementById('no-results');
+
+  searchInput.addEventListener('input', function () {
+    var term = searchInput.value.trim().toLowerCase();
+    var visibleCount = 0;
+
+    cards.forEach(function (card) {
+      var haystack = card.dataset.search + ' ' + card.textContent.toLowerCase();
+      var matches = term === '' || haystack.indexOf(term) !== -1;
+      card.classList.toggle('filtered-out', !matches);
+      if (matches) {
+        visibleCount++;
+        if (term !== '') {
+          card.classList.remove('just-matched');
+          void card.offsetWidth; /* restart animation */
+          card.classList.add('just-matched');
+        }
+      }
+    });
+
+    noResults.classList.toggle('show', visibleCount === 0);
+  });
+
+  // Plugin 2: star rating widget
+  document.querySelectorAll('.rating').forEach(function (group) {
+    var buttons = group.querySelectorAll('button');
+    var current = parseInt(group.dataset.rating, 10) || 0;
+
+    function paint(value) {
+      buttons.forEach(function (btn) {
+        btn.classList.toggle('active', parseInt(btn.dataset.star, 10) <= value);
+      });
+    }
+    paint(current);
+
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        current = parseInt(btn.dataset.star, 10);
+        group.dataset.rating = current;
+        paint(current);
+      });
+    });
+  });
+</script>
+<script src="site.js"></script>
+</body>
+</html>

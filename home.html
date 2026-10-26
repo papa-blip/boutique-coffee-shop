@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bean Boutique | Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <p class="brand"><strong>BEAN BOUTIQUE</strong> — independent coffee, thoughtfully roasted</p>
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <a href="home.html" class="current">Home</a>
+      <a href="coffee.html">Coffee Selection</a>
+      <a href="equipment.html">Brewing Equipment</a>
+      <a href="events.html">Events &amp; Workshops</a>
+      <a href="offers.html">Offers &amp; Subscriptions</a>
+      <a href="cart.html">Shopping Cart</a>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="welcome">
+      <div class="hero">
+        <img src="images/hero-pour.jpg" alt="Coffee being poured beside roasted coffee beans" width="1200" height="700">
+        <div class="hero-caption">
+          <h1 id="welcome">Good coffee. Good company.</h1>
+          <p>Small-batch beans, honest advice, and a welcoming neighbourhood table.</p>
+        </div>
+      </div>
+      <p><a href="coffee.html">Explore today's coffees</a> &middot; <a href="events.html">Join an upcoming workshop</a></p>
+    </section>
+
+    <!-- Slideshow: featured products & events (Task 1 — Home page requirement) -->
+    <section aria-labelledby="featured">
+      <h2 id="featured">Featured this week</h2>
+      <div class="slideshow" id="featured-slideshow">
+        <div class="slides" id="slideshow-track">
+          <div class="slide">
+            <img src="images/slide-espresso.jpg" alt="Cup of espresso with crema" width="140" height="140">
+            <div>
+              <h3>Sunrise Espresso</h3>
+              <p>Chocolate, toasted almond, and orange zest. A balanced everyday espresso.</p>
+              <a href="coffee.html#sunrise">View coffee</a>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/slide-pourover.jpg" alt="Pour-over coffee being brewed by hand" width="140" height="140">
+            <div>
+              <h3>Pour-over Saturday</h3>
+              <p>Compare three brewing recipes with our roaster, every Saturday morning.</p>
+              <a href="events.html#pour-over">Reserve a place</a>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/slide-frenchpress.jpg" alt="French press coffee maker on a table" width="140" height="140">
+            <div>
+              <h3>French Press Starter Set</h3>
+              <p>A simple, generous brew kit for slow mornings at home.</p>
+              <a href="equipment.html#french-press">View equipment</a>
+            </div>
+          </div>
+        </div>
+        <div class="slideshow-controls">
+          <button type="button" id="slide-prev" aria-label="Previous slide">&larr; Prev</button>
+          <div class="slide-dots" id="slide-dots" aria-hidden="true">
+            <span class="active"></span><span></span><span></span>
+          </div>
+          <button type="button" id="slide-next" aria-label="Next slide">Next &rarr;</button>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="story">
+      <h2 id="story">From our roaster to your cup</h2>
+      <img class="feature-img" src="images/roastery-interior.jpg" alt="Warm coffee shop interior with tables and chairs" width="800" height="500">
+      <p>We source characterful coffees and roast them in small batches. Ask our team about grind size, water, and the best method for your morning routine.</p>
+    </section>
+
+    <!-- Social feed widget (plugin, Task 1 — Home page requirement) -->
+    <section aria-labelledby="social">
+      <h2 id="social">From our community</h2>
+      <div class="social-feed">
+        <p>Follow <a href="https://instagram.com" target="_blank" rel="noopener">@beanboutique</a> for daily brews, workshop recaps, and regulars' orders.</p>
+        <div class="social-grid">
+          <a href="https://instagram.com" target="_blank" rel="noopener"><img src="images/social-1.jpg" alt="Latte art photo shared by a customer" width="90" height="90"></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener"><img src="images/social-2.jpg" alt="Bag of freshly roasted beans photo" width="90" height="90"></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener"><img src="images/social-3.jpg" alt="Workshop group photo shared on social media" width="90" height="90"></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener"><img src="images/social-4.jpg" alt="Espresso pour photo shared by a customer" width="90" height="90"></a>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="welcome-offer">
+      <h2 id="welcome-offer">First visit?</h2>
+      <p>New here? Open your welcome offer below, or explore the menu first — the offer will keep.</p>
+      <button type="button" id="open-offer-modal">Show my welcome offer</button>
+    </section>
+  </main>
+
+  <!-- Modal popup for first-time visitors (Task 1 — Home page requirement) -->
+  <div class="modal-overlay" id="offer-modal" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
+      <button type="button" class="modal-close" id="close-offer-modal" aria-label="Close">&times;</button>
+      <h2 id="modal-heading">Welcome to Bean Boutique</h2>
+      <p>Join the Bean Letter and get 10% off your first online order.</p>
+      <form action="thanks.html" method="get">
+        <label for="home-email">Email address</label>
+        <input id="home-email" name="email" type="email" required>
+        <button type="submit">Claim 10% off</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Bean Boutique</h3>
+        <p>An independent neighbourhood coffee shop — small-batch roasting, honest brewing advice, and a table that's always open.</p>
+      </div>
+
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="coffee.html">Coffee Selection</a></li>
+          <li><a href="equipment.html">Brewing Equipment</a></li>
+          <li><a href="events.html">Events &amp; Workshops</a></li>
+          <li><a href="offers.html">Offers &amp; Subscriptions</a></li>
+          <li><a href="cart.html">Shopping Cart</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Visit us</h3>
+        <p>NACIT Lilongwe campus, off Paul Kagame Road, right behind Government Print.</p>
+        <p>Mon&ndash;Fri: 7:00&ndash;18:00<br>Sat&ndash;Sun: 8:00&ndash;16:00</p>
+        <p><a href="https://www.openstreetmap.org/search?query=National%20College%20of%20Information%20Technology%20NACIT%20Paul%20Kagame%20Road%20Lilongwe" target="_blank" rel="noopener">Open interactive map</a></p>
+      </div>
+
+      <div>
+        <h3>Get in touch</h3>
+        <p>Email: <a href="mailto:beanboutique@gmail.com">beanboutique@gmail.com</a></p>
+        <p>Phone: <a href="tel:+265882634630">+265 882634630</a></p>
+        <div class="footer-social">
+          <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+    </div>
+
+
+  </footer>
+
+  <script>
+    // Modal: show automatically for first-time visitors (once per browser session),
+    // and let anyone reopen it with the button.
+    var modal = document.getElementById('offer-modal');
+    var openBtn = document.getElementById('open-offer-modal');
+    var closeBtn = document.getElementById('close-offer-modal');
+
+    function openModal() { modal.hidden = false; }
+    function closeModal() { modal.hidden = true; }
+
+    openBtn.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !modal.hidden) closeModal();
+    });
+
+    if (!sessionStorage.getItem('seenWelcomeOffer')) {
+      openModal();
+      sessionStorage.setItem('seenWelcomeOffer', 'true');
+    }
+
+    // Slideshow
+    var track = document.getElementById('slideshow-track');
+    var slides = track.children;
+    var dots = document.querySelectorAll('#slide-dots span');
+    var index = 0;
+
+    function showSlide(i) {
+      index = (i + slides.length) % slides.length;
+      track.style.transform = 'translateX(-' + (index * 100) + '%)';
+      dots.forEach(function (dot, di) {
+        dot.classList.toggle('active', di === index);
+      });
+    }
+
+    document.getElementById('slide-prev').addEventListener('click', function () { showSlide(index - 1); });
+    document.getElementById('slide-next').addEventListener('click', function () { showSlide(index + 1); });
+
+    var autoSlide = setInterval(function () { showSlide(index + 1); }, 6000);
+    document.getElementById('featured-slideshow').addEventListener('mouseenter', function () { clearInterval(autoSlide); });
+  </script>
+</body>
+</html>
